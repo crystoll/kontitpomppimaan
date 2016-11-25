@@ -1,0 +1,11 @@
+target/
+
+/target
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+/src/main/resources/static/node_modules/

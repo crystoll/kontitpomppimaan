@@ -19,7 +19,7 @@ var BeerService = (function () {
     function BeerService(http) {
         this.http = http;
         // private instance variable to hold base url
-        this.beersUrl = 'http://localhost:8080/api/beers';
+        this.beersUrl = 'http://localhost/api/beers';
     }
     // Fetch all existing beer
     BeerService.prototype.getBeers = function () {

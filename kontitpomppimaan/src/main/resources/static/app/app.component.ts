@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { BeerService } from './beer.service';
-import { Beer } from './beer';
+import { BeerService } from './beers/beer.service';
+import { Beer } from './models/beer';
 
 @Component({
   selector: 'my-app',
+  providers: [BeerService],
   template: `<h1>SABS time!</h1>
-<ul *ngFor="let beer of beers">
-    <li [(ngModel)]="beer.brand"></li>
+<ul>
+  <li *ngFor="let beer of beers">
+    {{beer.brand}}
+  </li>
 </ul>`,
 })
 export class AppComponent  implements OnInit {

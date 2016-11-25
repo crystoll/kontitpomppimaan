@@ -1,6 +1,6 @@
 import {Injectable}     from '@angular/core';
 import {Http, Response, Headers, RequestOptions} from '@angular/http';
-import {Beer}           from './beer';
+import {Beer}           from '../models/beer';
 import {Observable} from 'rxjs/Rx';
 
 // Import RxJs required methods
@@ -14,7 +14,7 @@ export class BeerService {
     }
 
     // private instance variable to hold base url
-    private beersUrl = 'http://localhost:8080/api/beers';
+    private beersUrl = 'http://localhost/api/beers';
 
     // Fetch all existing beer
     getBeers(): Observable<Beer[]> {

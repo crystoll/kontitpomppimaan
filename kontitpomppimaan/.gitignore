@@ -9,3 +9,4 @@ target/
 *.ipr
 
 /src/main/resources/static/node_modules/
+/.mvn/wrapper/maven-wrapper.jar

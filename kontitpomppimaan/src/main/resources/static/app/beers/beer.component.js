@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var beer_service_1 = require('./beers/beer.service');
-var AppComponent = (function () {
-    function AppComponent(beerService) {
+var beer_service_1 = require('./beer.service');
+var BeerComponent = (function () {
+    function BeerComponent(beerService) {
         this.beerService = beerService;
         this.name = 'Angular';
     }
-    AppComponent.prototype.ngOnInit = function () {
+    BeerComponent.prototype.ngOnInit = function () {
         // Load comments
         this.loadBeers();
     };
-    AppComponent.prototype.loadBeers = function () {
+    BeerComponent.prototype.loadBeers = function () {
         var _this = this;
         // Get all comments
         this.beerService.getBeers()
@@ -30,15 +30,15 @@ var AppComponent = (function () {
             console.log(err);
         });
     };
-    AppComponent = __decorate([
+    BeerComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
+            selector: 'beer',
             providers: [beer_service_1.BeerService],
             template: "<h1>SABS time!</h1>\n<ul>\n  <li *ngFor=\"let beer of beers\">\n    {{beer.brand}}\n  </li>\n</ul>",
         }), 
         __metadata('design:paramtypes', [beer_service_1.BeerService])
-    ], AppComponent);
-    return AppComponent;
+    ], BeerComponent);
+    return BeerComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.BeerComponent = BeerComponent;
+//# sourceMappingURL=beer.component.js.map
